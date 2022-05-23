@@ -6,7 +6,7 @@ export function getColorFromCount(num: number) {
   if (num % 2 === 0) {
     return "green";
   } else {
-    return "red";
+    return "darkred";
   }
 }
 

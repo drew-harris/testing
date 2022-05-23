@@ -17,6 +17,10 @@ describe("Counter tests", () => {
     expect(button.innerHTML).toBe("1");
     fireEvent.click(button);
     expect(button.innerHTML).toBe("2");
+    fireEvent.click(button);
+    expect(button.innerHTML).toBe("3");
+    fireEvent.click(button);
+    expect(button.innerHTML).toBe("4");
   });
 
   it("Has a green background when count is even", () => {
@@ -26,7 +30,7 @@ describe("Counter tests", () => {
     expect(button.style.backgroundColor).toBe("green");
     fireEvent.click(button);
     expect(button.innerHTML).toBe("1");
-    expect(button.style.backgroundColor).toBe("red");
+    expect(button.style.backgroundColor).toBe("darkred");
   });
 });
 
@@ -36,8 +40,8 @@ describe("Color based off count", () => {
     expect(myString).toBe("green");
   });
 
-  it("is red when odd", () => {
+  it("is darkred when odd", () => {
     const myString = getColorFromCount(1);
-    expect(myString).toBe("red");
+    expect(myString).toBe("darkred");
   });
 });
